@@ -11,7 +11,7 @@ const path = require("path");
 
 dotenv.config();
 const corsOptions = {
-  origin: 'http://localhost:5173' 
+  origin: 'https://conversaweb-chat.netlify.app/' 
 };
 connectDB();
 app.use(cors(corsOptions));
@@ -36,7 +36,7 @@ const server = app.listen(PORT, (req, res) => console.log(`Server Started at POR
 const io = require('socket.io')(server,{
   pingTimeout:60000,
   cors:{
-    origin:"http://localhost:5173",
+    origin:"https://conversaweb-chat.netlify.app/",
   },
 });
 
